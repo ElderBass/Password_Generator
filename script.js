@@ -11,12 +11,11 @@
 
         //once all prompts are answered, a password is generated somehow
 
-var characterTypes = {"uppercase": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
-    "lowercase": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"], 
-    'numeric': [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,],  'special': ["~", "!", "@", "#", "$", "%", "^", "&", "*", "?"] } ;
+var generateButton = document.querySelector("#passwordButton");
 
-function passwordGenerator() { //this will be linked to the html button
-    
+
+var passwordGenerator = function() { //this will be linked to the html button
+
 
     while (true) {
         var passwordLength = prompt("How many characters will your password be? Choose a number from 8 to 128 inclusive.")
@@ -114,16 +113,13 @@ function passwordGenerator() { //this will be linked to the html button
  adding that to a concatenated string which is the password? I for loop this until the 
  prompted length has been reached, then exit the loop and return the password into the output box?
  */
-console.log(actualPassword);
-console.log(passwordCharacters);
+
 alert("Drumroll, please, while Password Generator: 5000 works its magic! bdrbdrbdrbdrbdrbdrbdr....")
 alert("Awwww SNAP! Your new password is ready! Write it down so you don't forget it like I always do!");
-document.querySelector(".passwordContainer").innerHTML = actualPassword;
+document.querySelector(".passwordContainer").innerHTML = actualPassword; //this prints the password into the container labeled "Your New Password"
 
-return actualPassword;  
+return actualPassword;  //not even sure I need this lolol
 
 }
 
-
-console.log(passwordCharacters);
-console.log(actualPassword);
+generateButton.addEventListener("click", passwordGenerator);
