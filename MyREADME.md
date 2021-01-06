@@ -38,3 +38,6 @@ Before password is generated:
 After a 128-character password is generated:
 
 ![Password Generator with a rand 128 character password](./Assets\Generator-With-128-Password.png "With 128 Password" )
+
+
+Note that these above images appear just fine in the VS Code preview, but do not appear on Git Hub. Not sure why. 
