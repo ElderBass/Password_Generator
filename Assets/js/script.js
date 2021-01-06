@@ -1,3 +1,6 @@
+/*Apologies in advance: I'm not sure what 'best practices' are for quality comments, and
+I tend to ramble a lot. So yeah, sorry about that.*/
+
 
 //This variable is set to the button labeled "Generate Password" in the HTML. It will be 
 var generateButton = document.querySelector("#passwordButton");
@@ -14,7 +17,7 @@ Likewise, if the user enters any string, it will once again show the alert and p
         var passwordLength = prompt("How many characters will your password be? Choose a number from 8 to 128 inclusive.")
 
         if (passwordLength <= 128 && passwordLength >= 8) {
-           alert("Sweet! Your password will be "+passwordLength+" characters long!");
+           alert("Mathematical! Your password will be "+passwordLength+" characters long!");
            parseInt(passwordLength); //Not sure that I need this but it's here just in case.
             break;
                 
@@ -74,8 +77,8 @@ Likewise, if the user enters any string, it will once again show the alert and p
 alert("Drumroll, please, while Password Generator: 5000 works its magic! bdrbdrbdrbdrbdrbdrbdr....")
 alert("Awwww SNAP! Your new password is ready! Write it down so you don't forget it like I always do!");
 
-//this prints the password into the container labeled "Your New Password"
-document.querySelector(".passwordContainer").innerHTML = actualPassword; 
+//this prints the password into the container labeled "Your New Password", replacing the text there by default.
+document.querySelector("#passwordP").innerHTML = actualPassword; 
 
 return actualPassword;  //not even sure I need this lolol
 

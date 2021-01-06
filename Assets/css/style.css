@@ -1,3 +1,5 @@
+/*The header, body, and h1 styling should be straight-forward and
+largely self-explanatory. Nothing too crazy here.*/
 header {
     border-bottom: solid 5px rgb(87, 6, 87);
     background-color: rgb(116, 232, 236);
@@ -47,13 +49,17 @@ password at 25px size if the user so chose. */
     border: dashed 3px rgb(87, 6, 87);
     border-radius: 20px;
     background-color: white;
+
+    word-wrap: break-word; /*This ensures the password string will break once it reaches
+    the end of the container and not fly off the page. */
+}
+#passwordP{ /*the id for the <p> inside of the password box. Used for styling and an in the javascript.*/
     color: rgb(87, 6, 87);
     font-size: 18px;
-    word-wrap: break-word; /*This ensures the password string will break once it reaches
-                            the end of the container and not fly off the page. */
+     
 }
 
-.buttonContainer { /*Centers the button on in the container*/
+.buttonContainer { /*Centers the button in the container*/
     text-align: center;
 }
 
@@ -75,14 +81,14 @@ password at 25px size if the user so chose. */
 to be 25px, then to resize it at smaller screen sizes so it would still fit the div. Not sure 
 what went wrong as I followed the example and activities from prior lessons.*/
 @media (max-width: 767) {
-    .passwordContainer p {
+    #passwordP {
         font-size: 15px;
-        padding: 0px;
+        
     }
 }
 
 @media (min-width: 500) {
-    .passwordContainer p {
+    #passwordP {
         font-size: 8px;
 
     }

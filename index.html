@@ -17,8 +17,13 @@
         <h1><span style='font-size:50px;'>&#129302;</span>Password Generator: 5000<span style='font-size:50px;'>&#129302;</span></h1>
     </header>
 
-    <!--For the main content on the page.-->
+    <!--This container is the main content of the page. I only realized much later that I could have used a card in place of this container. I'm honestly
+    not sure if that's considered more "semantic" or better practice, but the way I have written it here seems to work just as well.-->
     <div class='container mainContainer'>
+
+    <!--For all of the collowing, I used the bootstrap grid system, thinking I would borrow more components from BS, but I actually
+    didn't use much of anything from BS. However, I believe this row/column structure helps keep the page responsive for different 
+    screen sizes. I also realized much later that I could -->
         <div class='row'>
             <div class="col-lg-12 col-md-12 col-sm-12">
                 <h2>Generate a Password, Mate</h2>
@@ -28,14 +33,19 @@
         <div class='row'>
             <div class='col-lg-12 col-md-12 col-sm-12'> 
                 <div class='container passwordContainer'>
-                    <p>Your New Password</p>
+                    <!--Below is essentially placeholder text that will be replaced with the 
+                        generated password after the function has run.-->
+                    <p id='passwordP'>Your New Password</p>
                 </div>
                 <hr>
             </div>          
         </div>
         <div class='row'>
             <div class='col-lg-12 col-md-12 col-sm-12'>
-                <div class="d-grid gap-2 col-lg-6 col-6 mx-auto buttonContainer">
+                <!--Below is 'class' code for a bootstrap element. I don't actually think much of this is doing anything
+                I initially included it to center my button on the page, but I was able to circumvent that with a much simpler
+                solution in my CSS file. -->
+                <div class="d-grid gap-2 col-6 mx-auto buttonContainer">
                     <button id='passwordButton' type="button">Generate Password</button>
                 </div>
             </div>
