@@ -1,0 +1,89 @@
+header {
+    border-bottom: solid 5px rgb(87, 6, 87);
+    background-color: rgb(116, 232, 236);
+    padding: 10px;
+}
+body {
+    background-image: url(https://www.technocrazed.com/wp-content/uploads/2015/12/HD-Space-Wallpaper-For-Background-6.jpg);
+}
+
+h1 {
+    font-family: monospace;
+    font-size: 60px;
+    font-weight: 800;
+    color: rgb(87, 6, 87); 
+    text-align: center;
+}
+/*The big container in the body of the document. I think cards could also be used, but I was more comfortable doing
+it this way. Not sure if it would be more semantic to use a card instead of container. */
+.mainContainer {
+    width: auto;
+    margin-right: auto; /*Formatted such that it will stay centered in the page no matter what screen size.*/
+    margin-left: auto; 
+    margin-top: 40px;
+    padding: 15px;
+    background-color: rgb(116, 232, 236);
+    border: solid 5px rgb(87, 6, 87);
+    border-radius: 15px;
+}
+h2 { /*Simple formatting for the "Generate a Password, Mate" text in container. */
+    font-family: monospace;
+    color:rgb(87, 6, 87);
+    font-size: 48px;
+    text-align: center;
+}
+
+hr { /*Got a little fancy and altered my dividing lines to thicken them and match the color scheme.*/
+    line-height: 10px;
+    border: solid 1px rgb(87, 6, 87);
+}
+
+/*This is the dashed box in the center of my container. I made it large enough to accomodate a 128 character
+password at 25px size if the user so chose. */
+.passwordContainer  {
+    height: 170px;
+    text-align: center;
+    padding: 15px;
+    border: dashed 3px rgb(87, 6, 87);
+    border-radius: 20px;
+    background-color: white;
+    color: rgb(87, 6, 87);
+    font-size: 18px;
+    word-wrap: break-word; /*This ensures the password string will break once it reaches
+                            the end of the container and not fly off the page. */
+}
+
+.buttonContainer { /*Centers the button on in the container*/
+    text-align: center;
+}
+
+#passwordButton { 
+    background-color:  rgb(87, 6, 87);
+    color:rgb(116, 232, 236);
+    font-weight: 600;
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;    /*Some of this formatting might be excessive or redundant. */
+    margin-left: auto;
+    margin-right: auto;
+    width:fit-content; 
+
+}
+/*These didn't work and I wasn't sure why. I initially wanted the text inside my dashed box
+to be 25px, then to resize it at smaller screen sizes so it would still fit the div. Not sure 
+what went wrong as I followed the example and activities from prior lessons.*/
+@media (max-width: 767) {
+    .passwordContainer p {
+        font-size: 15px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 500) {
+    .passwordContainer p {
+        font-size: 8px;
+
+    }
+}
